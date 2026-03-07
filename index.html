@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Login | GitHub Issues</title>
+
+  <!-- tailwind and daisyUI -->
+  <link href="https://cdn.jsdelivr.net/npm/daisyui@5" rel="stylesheet" type="text/css" />
+  <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+
+  <!-- Font CDN -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Geist:wght@100..900&display=swap" rel="stylesheet">
+  <!-- icon CDN -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+    integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <!-- stylesheet -->
+  <link rel="stylesheet" href="./style.css">
+</head>
+
+<body class="content-center align-middle">
+  <main class="max-w-[520px] shadow-2xl mx-auto bg-white rounded-xl p-8 m-15">
+    <div class="text-center">
+    <img class="mx-auto" src="./assets/github-logo.png" alt="">
+    <h2 class="font-bold text-2xl">GitHub Issues Tracker</h2>
+    <p class="text-gray-500">Sign in to manage your issues</p>
+    </div>
+
+  <section>
+    <div class="card p-4 bg-base-100 w-full  mx-auto">
+      <fieldset class="fieldset">
+        <label class="label">Username</label>
+        <input type="email" id="input-userID" class="input w-full" placeholder="Enter username" />
+        <label class="label mt-5">Password</label>
+        <input type="password" id="input-password" class=" input w-full" placeholder="Password" />
+        <button id="login-btn" class="btn btn-primary mt-4 w-full">Login</button>
+      </fieldset>
+    </div>
+
+    <div class="flex items-center my-5 justify-around">
+      <div class="grow border-t border-gray-300"></div>
+      <span class="mx-2">OR</span>
+      <div class="grow border-t border-gray-300"></div>
+    </div>
+
+  </section>
+
+  <div class="text-center space-y-6">
+    <p class="text-gray-500">Demo Credentials:</p>
+    <div class="space-y-1 bg-gray-50 p-4 rounded">
+      <p><span class="font-bold">Username:</span> admin</p>
+      <p><span class="font-bold">Password:</span> admin123</p>
+    </div>
+  </div>
+  </main>
+
+  <script src="./scriptFile/index.js"></script>
+</body>
+
+</html>

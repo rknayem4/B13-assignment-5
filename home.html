@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Home | GitHub issues</title>
+  <!-- tailwind and daisyUI -->
+  <link href="https://cdn.jsdelivr.net/npm/daisyui@5" rel="stylesheet" type="text/css" />
+  <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+
+  <!-- Font CDN -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Geist:wght@100..900&display=swap" rel="stylesheet">
+  <!-- icon CDN -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+    integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+
+<body>
+  <header class="py-4 px-9 mx-auto  shadow-md flex justify-between">
+    <div class="flex  space-x-3">
+      <img class="max-w-9" src="./assets/github-logo.png" alt="">
+      <h1 class="text-2xl font-bold">GitHub Issues Tracker</h1>
+    </div>
+
+    <div class="flex space-x-2">
+      <label class="input">
+        <svg class="h-[1em] opacity-50" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+          <g stroke-linejoin="round" stroke-linecap="round" stroke-width="2.5" fill="none" stroke="currentColor">
+            <circle cx="11" cy="11" r="8"></circle>
+            <path d="m21 21-4.3-4.3"></path>
+          </g>
+        </svg>
+        <input id="search-value" type="search" required placeholder="Search" />
+      </label>
+      <button id="search-btn" class="btn btn-primary">search</button>
+    </div>
+  </header>
+
+  <section class="max-w-7xl mx-auto p-5 shadow-md rounded-md my-6">
+    <button id="all-btn" class="btn btn-primary w-[100px]"> All </button>
+    <button id="open-btn" class="btn btn-outline w-[100px]"> Open</button>
+    <button id="closed-btn" class="btn btn-outline w-[100px]"> Closed</button>
+  </section>
+
+  <section class="max-w-7xl mx-auto p-5 shadow-md rounded-md my-6">
+    <!-- section heder -->
+    <div class="flex justify-between items-center ">
+      <div class="flex space-x-2 items-center">
+        <div class=""><img src="./assets/Aperture.png" alt=""></div>
+        <div class="space-y-1">
+          <h2 class="font-bold text-xl"><span id="counter">50</span> Issues</h2>
+          <p>Track and manage your project issues</p>
+        </div>
+      </div>
+
+      <div class="flex space-x-3">
+        <div class="flex space-x-2">
+          <div class=" bg-[#00A96E] rounded-full p-3"></div>
+          <p class="font-medium">Open</p>
+        </div>
+        <div class="flex space-x-2">
+          <div class=" bg-[#A855F7] rounded-full p-3"></div>
+          <p class="font-medium">Closed</p>
+        </div>
+      </div>
+    </div>
+
+    <div id="card-container" class=" grid grid-cols-3 gap-6">
+
+      <!-- <div class="card m-4 p-5 shadow border-t-4 space-y-4 border-[#00A96E]">
+        <div class="flex justify-between items-center">
+          <img src="./assets/Open-Status.png" alt="">
+          <p class="py-1 px-7 font-semibold bg-[#ef444430] text-[#ef4444] rounded-2xl">HIGH</p>
+        </div>
+        <h2 class="font-bold text-xl">Fix navigation menu on mobile devices</h2>
+        <p class="text-gray-500">The navigation menu doesn't collapse properly on mobile devices...</p>
+        <div class="flex space-x-3">
+          <p class="py-1 px-3 font-semibold bg-[#ef444430] text-[#ef4444] rounded-2xl border border-[#ef4444]"><i
+              class="fa-solid fa-bugs"></i>BUG</p>
+          <p class="py-1 px-7 font-semibold bg-[#FFF8DB] text-[#D97706] rounded-2xl border border-[#FDE68A]"><i
+              class="fa-regular fa-life-ring"></i>HELP WANTED</p>
+        </div>
+        <hr class="text-gray-300 my-4">
+        <div class="">
+          <p class="text-gray-500">#1 by john_do</p>
+          <p class="text-gray-500">1/15/2024</p>
+        </div>
+      </div> -->
+
+
+    </div>
+  </section>
+  <script src="./scriptFile/script.js"></script>
+  <script src="./scriptFile/filter.js"></script>
+</body>
+
+</html>
