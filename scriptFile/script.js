@@ -3,24 +3,39 @@ const loadData = () => {
   fetch(url)
     .then((res) => res.json())
     .then((output) => {
-      displayShow(output.data)
+      displayShow(output.data);
     });
 };
-const displayShow = (id)=>{
-  const cardContainer = document.getElementById('card-container')
-  for (data of id){
-    const div = document.createElement('div')
-    // if (data.status = "open"){
-    //   document.getElementById('card').className = ' border-[#00A96E]'
-    // }
-    // else{
-    //   document.getElementById('card').className = ' border-[#A855F7]'
-    // }
-    div.innerHTML =`
-    <div id="card" class=" m-4 p-5 shadow border-t-4 space-y-4 border-[#00A96E] h-full rounded-xl">
+const displayShow = (id) => {
+  const cardContainer = document.getElementById("card-container");
+  for (data of id) {
+    let borderColor = "";
+    let statusColor = ""
+
+// status Color dynamic
+    if (data.priority === "high") {
+      statusColor = "bg-[#ef444430] text-[#ef4444]";
+    } 
+    else if (data.priority === "medium") {
+      statusColor = "bg-[#FFF8DB] text-[#D97706]";
+    } 
+    else {
+      statusColor = "bg-gray-200 text-gray-500";
+    }
+// border color dynamic
+    if (data.priority === "low") {
+      borderColor = "border-[#A855F7]";
+    } 
+    else {
+      borderColor = "border-green-500";
+    }
+    const div = document.createElement("div");
+
+    div.innerHTML = `
+    <div id="card" class=" m-4 p-5 shadow border-t-4 space-y-4 ${borderColor} h-full rounded-xl">
         <div class="flex justify-between items-center">
           <img src="./assets/Open-Status.png" alt="">
-          <p class="py-1 px-7 font-semibold bg-[#ef444430] text-[#ef4444] rounded-2xl">${data.priority}</p>
+          <p class="py-1 px-7 font-semibold ${statusColor} rounded-2xl">${data.priority.toUpperCase()}</p>
         </div>
         <h2 class="font-bold text-xl">${data.title}</h2>
         <p class="text-gray-500">${data.description}</p>
@@ -36,44 +51,46 @@ const displayShow = (id)=>{
           <p class="text-gray-500">${data.createdAt}</p>
         </div>
       </div>
-    `
-    console.log(data);
-    cardContainer.append(div)
+    `;
+    // console.log(data);
+    cardContainer.append(div);
   }
 
-}
+const counter = document.getElementById('counter')
+  const countProblem = id.length;
+  counter.innerText = countProblem;
+};
 loadData();
+
 // {id: 47, title: 'Add code syntax highlighting', description: 'Implement syntax highlighting for code blocks in comments and descriptions.', status: 'open', labels: Array(2), …}
 // assignee
-// : 
+// :
 // ""
 // author
-// : 
+// :
 // "syntax_simon"
 // createdAt
-// : 
+// :
 // "2024-01-25T11:00:00Z"
 // description
-// : 
+// :
 // "Implement syntax highlighting for code blocks in comments and descriptions."
 // id
-// : 
+// :
 // 47
 // labels
-// : 
-
+// :
 
 // (2) ['enhancement', 'good first issue']
 // priority
-// : 
+// :
 // "low"
 // status
-// : 
+// :
 // "open"
 // title
-// : 
+// :
 // "Add code syntax highlighting"
 // updatedAt
-// : 
+// :
 // "2024-01-25T11:00:00Z"
-// [[Prot
