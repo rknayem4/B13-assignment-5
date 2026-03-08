@@ -20,6 +20,7 @@ const loadData = () => {
 };
 const displayShow = (id) => {
   const cardContainer = document.getElementById("card-container");
+  cardContainer.innerHTML = " "
   for (data of id) {
     let borderColor = "";
     let statusColor = "";
@@ -68,6 +69,9 @@ const displayShow = (id) => {
   counter.innerText = countProblem;
 };
 loadData();
+
+
+// Open button (high + medium)
 
 // {id: 47, title: 'Add code syntax highlighting', description: 'Implement syntax highlighting for code blocks in comments and descriptions.', status: 'open', labels: Array(2), …}
 // assignee
