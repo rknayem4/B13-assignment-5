@@ -1,6 +1,6 @@
 const showAll = () => {
   displayShow(allIssues);
-  
+  setActiveButton('all-btn')
 };
 
 const showOpen = () => {
@@ -9,10 +9,29 @@ const showOpen = () => {
   );
 
   displayShow(openIssues);
+  setActiveButton('open-btn')
 };
 
 
 const showClosed = ()=>{
-  const clodesIssues = allIssues.filter(issue => issue.priority === 'low');
-  displayShow(clodesIssues)
+  const closedIssues = allIssues.filter(issue => issue.priority === 'low');
+  displayShow(closedIssues)
+  setActiveButton("closed-btn")
 }
+
+
+const setActiveButton = (activeId) => {
+
+  const buttons = ["all-btn", "open-btn", "closed-btn"];
+
+  buttons.forEach((id) => {
+    const btn = document.getElementById(id);
+
+    btn.classList.remove("btn-primary");
+    btn.classList.add("btn-outline");
+  });
+
+  const activeBtn = document.getElementById(activeId);
+  activeBtn.classList.remove("btn-outline");
+  activeBtn.classList.add("btn-primary");
+};

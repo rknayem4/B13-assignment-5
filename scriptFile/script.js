@@ -71,37 +71,3 @@ const displayShow = (id) => {
 loadData();
 
 
-// Open button (high + medium)
-
-// {id: 47, title: 'Add code syntax highlighting', description: 'Implement syntax highlighting for code blocks in comments and descriptions.', status: 'open', labels: Array(2), …}
-// assignee
-// :
-// ""
-// author
-// :
-// "syntax_simon"
-// createdAt
-// :
-// "2024-01-25T11:00:00Z"
-// description
-// :
-// "Implement syntax highlighting for code blocks in comments and descriptions."
-// id
-// :
-// 47
-// labels
-// :
-
-// (2) ['enhancement', 'good first issue']
-// priority
-// :
-// "low"
-// status
-// :
-// "open"
-// title
-// :
-// "Add code syntax highlighting"
-// updatedAt
-// :
-// "2024-01-25T11:00:00Z"
