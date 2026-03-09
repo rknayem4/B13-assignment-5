@@ -93,6 +93,23 @@
 
     </div>
   </section>
+  <!-- Open the modal using ID.showModal() method -->
+  <!-- <button class="btn" onclick="my_modal_5.showModal()">open modal</button> -->
+
+  <dialog id="my_modal_5" class="modal modal-bottom sm:modal-middle">
+    <div class="modal-box">
+      <div id="modelBox" class="">
+        <h2 class="font-bold text-xl">Lorem, ipsum.</h2>
+        <p><span class="bg-[#00A96E] text-white py-1 px-3 rounded-full">Opened</span></p>
+      </div>
+      <div class="modal-action">
+        <form method="dialog">
+          <!-- if there is a button in form, it will close the modal -->
+          <button class="btn btn-primary">Close</button>
+        </form>
+      </div>
+    </div>
+  </dialog>
   <script src="./scriptFile/script.js"></script>
   <script src="./scriptFile/filter.js"></script>
 </body>

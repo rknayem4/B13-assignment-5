@@ -42,7 +42,7 @@ const displayShow = (id) => {
     const div = document.createElement("div");
 
     div.innerHTML = `
-    <div id="card" class=" m-4 p-5 shadow border-t-4 space-y-4 ${borderColor} h-full rounded-xl">
+    <div onclick="my_modal_5.showModal()" id="card" class=" m-4 p-5 shadow border-t-4 space-y-4 ${borderColor} h-full rounded-xl">
         <div class="flex justify-between items-center">
           <img src="./assets/Open-Status.png" alt="">
           <p class="py-1 px-7 font-semibold ${statusColor} rounded-2xl">${data.priority.toUpperCase()}</p>
