@@ -65,6 +65,8 @@ const showClosed = () => {
   setActiveButton("closed-btn");
 };
 
+
+// ---- active button ----------
 const setActiveButton = (activeId) => {
   const buttons = ["all-btn", "open-btn", "closed-btn"];
 
@@ -79,3 +81,19 @@ const setActiveButton = (activeId) => {
   activeBtn.classList.remove("btn-outline");
   activeBtn.classList.add("btn-primary");
 };
+
+
+
+// ---------- search function ---------
+
+document.getElementById("search-btn").addEventListener("click", () => {
+
+  const searchValue = document.getElementById("search-value").value.toLowerCase();
+
+  const filteredIssues = allIssues.filter(issue =>
+    issue.title.toLowerCase().includes(searchValue)
+  );
+
+  displayShow(filteredIssues);
+
+});
