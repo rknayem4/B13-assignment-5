@@ -35,6 +35,7 @@ const displayShow = (id) => {
   for (data of id) {
     let borderColor = "";
     let statusColor = "";
+    let icon = "";
 
     // status Color dynamic
     if (data.priority === "high") {
@@ -50,12 +51,23 @@ const displayShow = (id) => {
     } else {
       borderColor = "border-green-500";
     }
+
+    // border color dynamic
+    if (data.priority === "low") {
+      icon = `<div class="bg-purple-100 text-purple-700 px-0.5 rounded-full">
+          <i class="fa-regular fa-circle-check"></i>
+          </div>`;
+    } else {
+      icon = `<div class="bg-green-100 text-green-700 px-0.5 rounded-full">
+          <i class="fa-regular fa-circle-dot"></i>
+          </div>`;
+    }
     const div = document.createElement("div");
 
     div.innerHTML = `
     <div onclick="loadModel(${data.id})" id="card" class=" m-4 p-5 shadow border-t-4 space-y-4 ${borderColor} h-full rounded-xl">
         <div class="flex justify-between items-center">
-          <img src="./assets/Open-Status.png" alt="">
+          ${icon}
           <p class="py-1 px-7 font-semibold ${statusColor} rounded-2xl">${data.priority.toUpperCase()}</p>
         </div>
         <h2 class="font-bold text-xl">${data.title}</h2>

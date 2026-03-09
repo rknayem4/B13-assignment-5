@@ -20,7 +20,8 @@
 </head>
 
 <body>
-  <header class="py-4 px-9 mx-auto  shadow-md flex justify-between max-sm:flex-col-reverse space-y-5 max-sm:text-center">
+  <header
+    class="py-4 px-9 mx-auto  shadow-md flex justify-between max-sm:flex-col-reverse space-y-5 max-sm:text-center">
     <div class="flex  space-x-3 max-sm:mx-auto max-sm:my-3">
       <img class="max-w-9" src="./assets/github-logo.png" alt="">
       <h1 class="text-2xl font-bold">GitHub Issues Tracker</h1>
@@ -73,32 +74,14 @@
     <div id="spinner" class="flex justify-center items-center hidden">
       <span class="loading loading-spinner loading-xl"></span>
     </div>
+
+    <!-- card- container  -->
     <div id="card-container" class=" grid grid-cols-4 gap-3  max-lg:grid-cols-3 max-md:grid-cols-2 max-sm:grid-cols-1">
 
-      <!-- <div class="card m-4 p-5 shadow border-t-4 space-y-4 border-[#00A96E]">
-        <div class="flex justify-between items-center">
-          <img src="./assets/Open-Status.png" alt="">
-          <p class="py-1 px-7 font-semibold bg-[#ef444430] text-[#ef4444] rounded-2xl">HIGH</p>
-        </div>
-        <h2 class="font-bold text-xl">Fix navigation menu on mobile devices</h2>
-        <p class="text-gray-500">The navigation menu doesn't collapse properly on mobile devices...</p>
-        <div class="flex space-x-3">
-          <p class="py-1 px-3 font-semibold bg-[#ef444430] text-[#ef4444] rounded-2xl border border-[#ef4444]"><i
-              class="fa-solid fa-bugs"></i>BUG</p>
-          <p class="py-1 px-7 font-semibold bg-[#FFF8DB] text-[#D97706] rounded-2xl border border-[#FDE68A]"><i
-              class="fa-regular fa-life-ring"></i>HELP WANTED</p>
-        </div>
-        <hr class="text-gray-300 my-4">
-        <div class="">
-          <p class="text-gray-500">#1 by john_do</p>
-          <p class="text-gray-500">1/15/2024</p>
-        </div>
-      </div> -->
 
     </div>
   </section>
-  <!-- Open the modal using ID.showModal() method -->
-  <!-- <button class="btn" onclick="my_modal_5.showModal()">open modal</button> -->
+
 
   <dialog id="showModal" class="modal modal-bottom sm:modal-middle">
     <div class="modal-box">
@@ -107,12 +90,13 @@
       </div>
       <div class="modal-action">
         <form method="dialog">
-          <!-- if there is a button in form, it will close the modal -->
           <button class="btn btn-primary btn-outline">Close</button>
         </form>
       </div>
     </div>
   </dialog>
+
+
   <script src="./scriptFile/script.js"></script>
   <script src="./scriptFile/filter.js"></script>
 </body>
