@@ -7,6 +7,7 @@ const modalStatus = (arr) => {
   return element.join(" ");
 };
 const loadModel = async (id) => {
+  managespinner(true)
   const url = `https://phi-lab-server.vercel.app/api/v1/lab/issue/${id}`;
   // console.log(url);
   const res = await fetch(url);
@@ -39,35 +40,11 @@ const displayDetails = (id) => {
         </div>
   `
   document.getElementById("showModal").showModal()
+  managespinner(false)
   console.log(id);
 };
-assignee
-: 
-""
-author
-: 
-"sarah_dev"
-createdAt
-: 
-"2024-01-14T14:20:00Z"
-description
-: 
-"Users are requesting a dark mode option. This would improve accessibility and user experience."
-id
-: 
-2
-labels
-: 
-(2) ['enhancement', 'good first issue']
-priority
-: 
-"medium"
-status
-: 
-"open"
-title
-: 
-"Add dark mode support"
+
+
 const showAll = () => {
   displayShow(allIssues);
   setActiveButton("all-btn");
