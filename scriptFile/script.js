@@ -4,7 +4,7 @@ const problemStatus = (arr) => {
   const element = arr.map(
     (
       el,
-    ) => ` <p class="py-1 px-3 font-semibold bg-[#ef444430] text-[#ef4444] rounded-2xl ">${el.toUpperCase()}</p> `,
+    ) => ` <p class="py-1 px-3 font-semibold text-sm bg-[#ef444430] text-[#ef4444] rounded-2xl ">${el.toUpperCase()}</p> `,
   );
   return element.join(" ");
 };
